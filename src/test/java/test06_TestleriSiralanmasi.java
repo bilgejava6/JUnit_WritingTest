@@ -1,7 +1,4 @@
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class test06_TestleriSiralanmasi {
@@ -21,4 +18,5 @@ public class test06_TestleriSiralanmasi {
     void siralam3(){
         System.out.println("3. Sırtada Çalışan");
     }
+
 }

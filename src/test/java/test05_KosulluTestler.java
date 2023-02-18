@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.*;
 
+
 import static org.junit.jupiter.api.condition.OS.*;
 
 public class test05_KosulluTestler {
@@ -17,6 +18,7 @@ public class test05_KosulluTestler {
     @EnabledOnOs(WINDOWS)
     void onlyOnWIN(){
         System.out.println("Sadece Windows üzerinde çalış");
+        System.out.println("Sistem....: "+System.getProperty("os.arch"));
     }
 
     @Test
@@ -35,10 +37,12 @@ public class test05_KosulluTestler {
      * Islemci mimarilerinde çalıştırma örnekleri
      */
     @Test
-    @EnabledOnOs(value = WINDOWS,architectures = "x86_64")
+    @EnabledOnOs(architectures = "amd64")
     void islemciIntel(){
         System.out.println("İntel işlemcilerde çalışır");
     }
+
+
 
     @Test
     @EnabledOnOs(architectures = "aarch64")
